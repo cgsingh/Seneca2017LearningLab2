@@ -4,7 +4,8 @@
   "description": "Learning Lab",
   "main": "seneca.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "lint": "node_modules/.bin/eslint *.js",
+  "test": "npm run -s lint"
   },
   "repository": {
     "type": "git",
