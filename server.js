@@ -11,6 +11,12 @@ var port = process.env.PORT || 3000;
 
 // Define some HTTP routes (e.g., URLs) users can access on our server
 
+app.get('/healthcheck', (req, res) => {
+  res.json({
+    uptime: process.uptime(),
+  });
+});
+
 // GET http://localhost:3000/
 app.get('/', function (req, res) {
   res.send('My Server is working!');
